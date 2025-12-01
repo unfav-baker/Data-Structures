@@ -14,7 +14,7 @@ public:
     }
 };
 
-// Traverse circular list
+
 void traverse(Node* head) {
     if (head == NULL) {
         cout << "List is empty" << endl;
@@ -29,7 +29,7 @@ void traverse(Node* head) {
     cout << "(head)" << endl;
 }
 
-// Insert at head
+
 void insertAtHead(Node*& head, int value) {
     Node* newNode = new Node(value);
 
@@ -51,7 +51,7 @@ void insertAtHead(Node*& head, int value) {
     head = newNode;
 }
 
-// Insert at end
+
 void insertionAtEnd(Node*& head, int value) {
 
     if (head == NULL) {
@@ -70,7 +70,7 @@ void insertionAtEnd(Node*& head, int value) {
     newNode->next = head;
 }
 
-// Insert at middle (position)
+
 void insertAtMiddle(Node*& head, int value, int position) {
 
     if (position == 1) {
@@ -91,7 +91,7 @@ void insertAtMiddle(Node*& head, int value, int position) {
     temp->next = newNode;
 }
 
-// Sort ascending (swap values)
+
 void sortAscending(Node*& head) {
     if (head == NULL || head->next == head)
         return;
@@ -114,7 +114,7 @@ void sortAscending(Node*& head) {
     } while (current != head);
 }
 
-// Sort descending
+
 void sortDescending(Node*& head) {
     if (head == NULL || head->next == head)
         return;
@@ -137,7 +137,7 @@ void sortDescending(Node*& head) {
     } while (current != head);
 }
 
-// Delete at start
+
 void deleteAtStart(Node*& head) {
 
     if (head == NULL)
@@ -161,7 +161,7 @@ void deleteAtStart(Node*& head) {
     free(deleteNode);
 }
 
-// Delete at end
+
 void deleteAtEnd(Node*& head) {
 
     if (head == NULL)
@@ -183,7 +183,7 @@ void deleteAtEnd(Node*& head) {
     free(del);
 }
 
-// Delete at middle
+
 void deleteAtMiddle(Node*& head, int position) {
 
     if (position == 1) {
@@ -204,7 +204,7 @@ void deleteAtMiddle(Node*& head, int position) {
     free(del);
 }
 
-// Update value at position
+
 void updateValue(Node*& head, int k, int updatedValue) {
 
     if (head == NULL)
@@ -221,7 +221,6 @@ void updateValue(Node*& head, int k, int updatedValue) {
     temp->value = updatedValue;
 }
 
-// Count nodes
 void count(Node* head) {
     if (head == NULL) {
         cout << "List empty" << endl;
@@ -239,7 +238,7 @@ void count(Node* head) {
     cout << "Total nodes: " << c << endl;
 }
 
-// Swap first two nodes (value)
+
 void swap(Node*& head) {
     if (head == NULL || head->next == head) return;
 
